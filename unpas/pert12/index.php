@@ -15,35 +15,35 @@ if (isset($_POST["cari"])) {
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>admin page</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin page</title>
+</head>
 
-    <body>
-        <h1>Daftar Mahasiswa</h1>
-        <a href="tambah.php">Tambah Data Mahasiswa</a>
-        <br><br>
-        <form action="" method="post">
-            <input type="text" name="keyword" size="30" autofocus placeholder="cari DATA disini" autocomplete="off">
-            <button type="submit" name="cari">Cari</button>
-        </form>
-        <br><br>
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th>NO.</th>
-                <th>Aksi</th>
-                <th>Gambar</th>
-                <th>NIM</th>
-                <th>Nama</th>
-                <th>email</th>
-                <th>jurusan</th>
-            </tr>
-            <!-- buat logika biar bisa nambah -->
-            <?php $i = 1; ?>
-            <?php foreach ($mahasiswa as $row) :  ?>
+<body>
+    <h1>Daftar Mahasiswa</h1>
+    <a href="tambah.php">Tambah Data Mahasiswa</a>
+    <br><br>
+    <form action="" method="post">
+        <input type="text" name="keyword" size="30" autofocus placeholder="cari DATA disini" autocomplete="off">
+        <button type="submit" name="cari">Cari</button>
+    </form>
+    <br><br>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>NO.</th>
+            <th>Aksi</th>
+            <th>Gambar</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>email</th>
+            <th>jurusan</th>
+        </tr>
+        <!-- buat logika biar bisa nambah -->
+        <?php $i = 1; ?>
+        <?php foreach ($mahasiswa as $row) :  ?>
             <tr>
                 <td><?= $i; ?></td>
                 <td>
@@ -57,8 +57,8 @@ if (isset($_POST["cari"])) {
                 <td><?= $row["jurusan"]; ?></td>
             </tr>
             <?php $i++; ?>
-            <?php endforeach; ?>
-        </table>
-    </body>
+        <?php endforeach; ?>
+    </table>
+</body>
 
 </html>
