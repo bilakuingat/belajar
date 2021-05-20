@@ -1,30 +1,30 @@
 <?php
 
 // * cara 1
-// function http_request($url)
-// {
-//     // * buat curl 
-//     $ch     = curl_init();
+function http_request($url)
+{
+    // * buat curl 
+    $ch     = curl_init();
 
-//     // * set 
-//     curl_setopt($ch, CURLOPT_URL, $url);
+    // * set 
+    curl_setopt($ch, CURLOPT_URL, $url);
 
-//     // * kembalikan ke string
-//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    // * kembalikan ke string
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-//     // * utk memanggil
-//     $output     = curl_exec($ch);
+    // * utk memanggil
+    $output     = curl_exec($ch);
 
-//     // * ditutup
-//     curl_close($ch);
+    // * ditutup
+    curl_close($ch);
 
-//     // * panggil
-//     return $output;
-// }
+    // * panggil
+    return $output;
+}
 
-// $data   = http_request("https://mmp.unej.ac.id/mod/assign/view.php?id=1349950");
+$data   = http_request("https://mmp.unej.ac.id/mod/assign/view.php?id=1349950");
 
-// echo $data;
+echo $data;
 
 // * cara 2
 function http_request($url)
